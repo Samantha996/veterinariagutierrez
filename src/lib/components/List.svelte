@@ -3,8 +3,9 @@
 	import clsx from 'clsx';
 	import { gsap } from 'gsap';
 	import { onMount } from 'svelte';
-	import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+	import ScrollTrigger from 'gsap/ScrollTrigger';
 
+	// Register ScrollTrigger
 	gsap.registerPlugin(ScrollTrigger);
 
 	onMount(() => {
@@ -24,11 +25,11 @@
 			}
 		);
 
-		// Animate each `.list__headers` and `.list__bullets` item as it scrolls into view
+		// Animate each `.list__bullets` item as it scrolls into view
 		document.querySelectorAll('.list__bullets').forEach((bullet) => {
 			gsap.fromTo(
 				bullet,
-				{ opacity: 0, y: 50 },
+				{ opacity: 0, y: 50 }, // start hidden and slightly lower
 				{
 					opacity: 1,
 					y: 0,
@@ -36,8 +37,8 @@
 					duration: 1,
 					scrollTrigger: {
 						trigger: bullet,
-						start: 'top bottom-=20%',
-						toggleActions: 'play pause resume reverse'
+						start: 'top 90%', // when bullet is 90% in viewport
+						toggleActions: 'play none none none' // play once
 					}
 				}
 			);
