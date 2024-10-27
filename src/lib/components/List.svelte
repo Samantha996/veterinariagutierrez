@@ -5,13 +5,14 @@
 	import { onMount } from 'svelte';
 	import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 
-	gsap.registerPlugin(ScrollTrigger);
-
 	onMount(() => {
-		// Animate the heading
+		gsap.registerPlugin(ScrollTrigger);
+
 		gsap.fromTo(
 			'.list__heading',
-			{ y: 100 },
+			{
+				y: 100
+			},
 			{
 				y: 0,
 				ease: 'power2.inOut',
@@ -23,25 +24,42 @@
 				}
 			}
 		);
-
-		// Animate each `.list__headers` and `.list__bullets` item as it scrolls into view
-		document.querySelectorAll('.list__bullets').forEach((bullet) => {
-			gsap.fromTo(
-				bullet,
-				{ opacity: 0, y: 50 },
-				{
-					opacity: 1,
-					y: 0,
-					ease: 'power2.inOut',
-					duration: 1,
-					scrollTrigger: {
-						trigger: bullet,
-						start: 'top bottom-=20%',
-						toggleActions: 'play pause resume reverse'
-					}
+		gsap.fromTo(
+			'.list__headers',
+			{
+				scale: 0.7,
+				opacity: 0.1
+			},
+			{
+				scale: 1,
+				opacity: 1,
+				ease: 'power2.inOut',
+				duration: 1,
+				scrollTrigger: {
+					trigger: '.list__headers',
+					start: 'top bottom-=10%',
+					toggleActions: 'play pause resume reverse'
 				}
-			);
-		});
+			}
+		);
+		gsap.fromTo(
+			'.list__bullets',
+			{
+				scale: 0.7,
+				opacity: 0.1
+			},
+			{
+				scale: 1,
+				opacity: 1,
+				ease: 'power2.inOut',
+				duration: 1,
+				scrollTrigger: {
+					trigger: '.list__bullets',
+					start: 'top bottom-=20%',
+					toggleActions: 'play pause resume reverse'
+				}
+			}
+		);
 	});
 </script>
 
