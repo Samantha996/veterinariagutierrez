@@ -4,6 +4,7 @@
 	import Logo from './Logo.svelte';
 	import MainLogo from './MainLogo.svelte';
 	import { gsap } from 'gsap'; // Make sure you have GSAP installed
+	import Ratings from './Ratings.svelte';
 
 	onMount(() => {
 		const tl = gsap.timeline({ defaults: { ease: 'power2.inOut' } });
@@ -60,6 +61,11 @@
 			nuestras instalaciones contamos con servicios médicos como vacunación, consulta general,
 			cirugía general, ortopedia, salud dental, y de estética canina y felina.
 		</p>
+		<div class="ratings mobile:mb-10 mt-0 flex items-center justify-center lg:mt-5">
+			<a href="https://g.co/kgs/SA2Bcrt">
+				<Ratings />
+			</a>
+		</div>
 	</div>
 </div>
 
@@ -68,9 +74,12 @@
 		.hero__body {
 			margin-bottom: 40px;
 		}
+		.ratings {
+			margin-top: -10px;
+		}
 	}
 	.background-main {
-		background-image: url('assets/main_background.svg');
+		background-image: url('/main_background.svg');
 	}
 	@media (max-width: 1024px) {
 		.background-main {
