@@ -10,7 +10,9 @@
 	<MainNav />
 </div>
 <Main />
-<List />
+<div class="-mt-10">
+	<List />
+</div>
 <Contact />
 <Footer />
 

@@ -22,7 +22,7 @@
 </script>
 
 <div
-	class="background-main relative mx-0 -mb-72 -mt-48 flex flex-col-reverse lg:flex-row"
+	class="background-main relative mx-0 -mb-72 -mt-48 flex flex-col-reverse lg:-mb-96 lg:flex-row"
 	id="home"
 >
 	<!-- Image Section -->
