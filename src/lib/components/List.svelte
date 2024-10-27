@@ -24,7 +24,7 @@
 				}
 			}
 		);
-		gsap.fromTo(
+		/*gsap.fromTo(
 			'.list__headers',
 			{
 				scale: 0.7,
@@ -59,7 +59,7 @@
 					toggleActions: 'play pause resume reverse'
 				}
 			}
-		);
+		);*/
 	});
 </script>
 
