@@ -72,7 +72,7 @@
 <style>
 	@media only screen and (max-width: 600px) {
 		.hero__body {
-			margin-bottom: 40px;
+			margin-bottom: 20px;
 		}
 		.ratings {
 			margin-top: -10px;
