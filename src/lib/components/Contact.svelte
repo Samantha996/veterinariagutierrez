@@ -88,7 +88,6 @@
 							height="450"
 							style="border:0;"
 							allowfullscreen=""
-							loading="lazy"
 							referrerpolicy="no-referrer-when-downgrade"
 						></iframe>
 					</div>
@@ -144,7 +143,6 @@
 							height="450"
 							style="border:0;"
 							allowfullscreen=""
-							loading="lazy"
 							referrerpolicy="no-referrer-when-downgrade"
 						></iframe>
 					</div>
@@ -206,7 +204,7 @@
 
 <style>
 	.background-contact {
-		background-image: url('assets/contact_background.svg');
+		background-image: url('/contact_background.svg');
 	}
 	.glass-container {
 		background: rgba(255, 255, 255, 0.2);

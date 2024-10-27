@@ -61,7 +61,7 @@
 			nuestras instalaciones contamos con servicios médicos como vacunación, consulta general,
 			cirugía general, ortopedia, salud dental, y de estética canina y felina.
 		</p>
-		<div class="ratings mobile:mb-10 mt-0 flex items-center justify-center lg:mt-5">
+		<div class="ratings mb-10 mt-5 flex items-center justify-center lg:mb-0 lg:mt-5">
 			<a href="https://g.co/kgs/SA2Bcrt">
 				<Ratings />
 			</a>
