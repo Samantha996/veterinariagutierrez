@@ -127,7 +127,7 @@
 	>
 		<button
 			type="button"
-			class="mb-5 block p-2 text-3xl text-green-900 md:hidden"
+			class="mb-5 block p-2 text-3xl text-green-900 lg:hidden"
 			on:click={toggleOpen}><Close /></button
 		>
 		<ul class="grid justify-items-end gap-8 pr-5 text-2xl">

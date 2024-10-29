@@ -11,6 +11,7 @@
 
 		tl.fromTo('.hero__heading', { scale: 0.5 }, { scale: 1, opacity: 1, duration: 1.4 });
 		tl.fromTo('.hero__body', { y: 200 }, { y: 0, opacity: 1, duration: 1.2 }, '-=0.6');
+		tl.fromTo('.hero__ratings', { y: 200 }, { y: 0, opacity: 1, duration: 1.2 }, '-=0.6');
 		tl.fromTo(
 			'.hero__image',
 			{ y: 0, scale: 0.4, opacity: 0 },
@@ -61,7 +62,7 @@
 			nuestras instalaciones contamos con servicios médicos como vacunación, consulta general,
 			cirugía general, ortopedia, salud dental, y de estética canina y felina.
 		</p>
-		<div class="ratings mb-10 mt-5 flex items-center justify-center lg:mb-0 lg:mt-5">
+		<div class="hero__ratings ratings mb-10 mt-5 flex items-center justify-center lg:mb-0 lg:mt-5">
 			<a href="https://g.co/kgs/SA2Bcrt">
 				<Ratings />
 			</a>
