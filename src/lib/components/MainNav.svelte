@@ -1,5 +1,12 @@
 <script>
+	import clsx from 'clsx';
+	import Close from './Close.svelte';
 	import Logo from './Logo.svelte';
+	import Menu from './Menu.svelte';
+	let isOpen = false;
+
+	const toggleOpen = () => (isOpen = !isOpen);
+	const close = () => (isOpen = false);
 </script>
 
 <nav class="flex w-full items-center justify-between bg-gray-200 shadow-xl">
@@ -12,8 +19,7 @@
 	<div class="hidden lg:contents">
 		<ul class="flex justify-center space-x-12">
 			<li><a class="hover:text-gray-400" href="#servicios">Servicios</a></li>
-			<li><a class="hover:text-gray-400" href="#horarios">Horarios</a></li>
-			<li><a class="hover:text-gray-400" href="#">Contactanos</a></li>
+			<li><a class="hover:text-gray-400" href="horarios">Contactanos</a></li>
 		</ul>
 	</div>
 
@@ -105,11 +111,39 @@
 			</li>
 		</ul>
 	</div>
+
+	<div class="justify-between pr-5 text-2xl lg:hidden">
+		<button on:click={toggleOpen}>
+			<Menu />
+		</button>
+	</div>
+
+	<!--Mobile Nav-->
+	<div
+		class={clsx(
+			'background-nav fixed inset-0 z-40 flex flex-col items-end bg-gray-100 pr-4 pt-4 transition-transform duration-300 ease-in-out md:hidden',
+			isOpen ? 'translate-x-0' : 'translate-x-[100%]'
+		)}
+	>
+		<button
+			type="button"
+			class="mb-5 block p-2 text-3xl text-green-900 md:hidden"
+			on:click={toggleOpen}><Close /></button
+		>
+		<ul class="grid justify-items-end gap-8 pr-5 text-2xl">
+			<li><a class="hover:text-gray-400" href="#servicios" on:click={toggleOpen}>Servicios</a></li>
+			<li><a class="hover:text-gray-400" href="#horarios" on:click={toggleOpen}>Contactanos</a></li>
+		</ul>
+	</div>
 </nav>
 
 <style>
 	nav {
 		position: relative; /* Or fixed */
 		z-index: 100; /* Ensures it stays on top */
+	}
+	.background-nav {
+		background-size: 300%; /* Zoom in to show fewer circles on smaller screens */
+		background-image: url('/mobile_background.svg');
 	}
 </style>

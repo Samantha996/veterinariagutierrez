@@ -18,11 +18,10 @@
 		// Animating the ball
 		tl.to(ball, { duration: 0.5, y: 0 }) // Move up
 			.to(ball, { duration: 1.25, y: 150, ease: 'bounce.out' }) // Drop down with bounce effect
-			.to(ball, { duration: 2.5, x: `+=${horizontalDistance}` }, '-=1.75') // Move horizontally
-			.to(ball, { duration: 1, x: 0, backgroundColor: gsap.utils.random(colors) }, '+=1') // Return and change color
+			.to(ball, { duration: 2.5, x: `+=${horizontalDistance}` }, '-=2') // Move horizontally
+			.to(ball, { duration: 2, x: -250, y: 100, backgroundColor: gsap.utils.random(colors) }, '+=1') // Return and change color
 			.call(play); // Recursively call the play function to loop
 	}
-
 	onMount(() => {
 		play(); // Start the animation when the component is mounted
 	});
