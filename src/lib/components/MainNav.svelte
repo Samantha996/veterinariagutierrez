@@ -121,7 +121,7 @@
 	<!--Mobile Nav-->
 	<div
 		class={clsx(
-			'background-nav fixed inset-0 z-40 flex flex-col items-end bg-gray-100 pr-4 pt-4 transition-transform duration-300 ease-in-out md:hidden',
+			'background-nav fixed inset-0 z-40 flex flex-col items-end bg-gray-100 pr-4 pt-4 transition-transform duration-300 ease-in-out lg:hidden',
 			isOpen ? 'translate-x-0' : 'translate-x-[100%]'
 		)}
 	>
