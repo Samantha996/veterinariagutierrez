@@ -63,7 +63,9 @@
 			cirugía general, ortopedia, salud dental, y de estética canina y felina.
 		</p>
 		<div class="hero__ratings ratings mb-10 mt-5 flex items-center justify-center lg:mb-0 lg:mt-5">
-			<a href="https://g.co/kgs/SA2Bcrt">
+			<a
+				href="https://www.google.com/search?sca_esv=861634fff9c7879c&cs=1&output=search&kgmid=/g/11b6_c8k8d&q=Veterinary+Clinic+Gutierrez&shndl=30&source=sh/x/kp/local/m1/1&kgs=0e40538b756ec331#lrd=0x80d948536593f633:0x5c178e5268bc3516,1,,,,"
+			>
 				<Ratings />
 			</a>
 		</div>
