@@ -1,8 +1,7 @@
 <footer class="m-10 flex flex-col justify-center space-y-10">
 	<nav class="flex flex-wrap justify-center gap-6 font-medium text-gray-500">
-		<a class="hover:text-gray-900" href="#">Servicios</a>
-		<a class="hover:text-gray-900" href="#">Horarios</a>
-		<a class="hover:text-gray-900" href="#">Contactanos</a>
+		<a class="hover:text-gray-900" href="#servicios">Servicios</a>
+		<a class="hover:text-gray-900" href="#horarios">Contactanos</a>
 	</nav>
 
 	<div class="flex justify-center space-x-5">

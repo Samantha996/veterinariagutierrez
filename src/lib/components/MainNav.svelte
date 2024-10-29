@@ -19,7 +19,7 @@
 	<div class="hidden lg:contents">
 		<ul class="flex justify-center space-x-12">
 			<li><a class="hover:text-gray-400" href="#servicios">Servicios</a></li>
-			<li><a class="hover:text-gray-400" href="horarios">Contactanos</a></li>
+			<li><a class="hover:text-gray-400" href="#horarios">Contactanos</a></li>
 		</ul>
 	</div>
 
